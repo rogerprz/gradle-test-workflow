@@ -1,4 +1,4 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace MsTestWorkflow
 {
@@ -8,6 +8,7 @@ namespace MsTestWorkflow
         [TestMethod]
         public void TestMethod1()
         {
+            Console.WriteLine("We got here C#");
         }
     }
 }
