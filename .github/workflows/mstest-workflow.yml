@@ -18,24 +18,29 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     
-    - name: Dependency - setup-msbuild
-      uses: microsoft/setup-msbuild@v1
-      with: 
-        vswhere-path: 'C:\Program Files (x86)\Microsoft Visual Studio\Common7\IDE\MSTest.exe' 
-    
-    - name: MSBuild
-      working-directory: src
-      continue-on-error: true
-      shell: cmd
-      run: msbuild MSTestWorkflow/MsTestWorkflow.csproj
-
-    - name: Run MsTest
-      working-directory: src
-      continue-on-error: true
-      run: mstest 'MSTest Visual Studio 2015' /resultsfile:TestResult.txt
+#     - name: Dependency - setup-msbuild
+#       uses: microsoft/setup-msbuild@v1
 #     - name: find-mstest
 #       run: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /help'
 #     - name: Run msbuild
 #       shell: cmd
 #       run: msbuild MSTestWorkflow/MsTestWorkflow.csproj -restore -p:OutputDir=C:\MySolutionOutput;ContinueOnError=true
+
+#       with: 
+#         vswhere-path: 'C:\Program Files (x86)\Microsoft Visual Studio\Common7\IDE\MSTest.exe' 
+    
+    - name: Dependency - MSBuild
+      uses: microsoft/setup-msbuild@v1.0.2
+      with:
+        vswhere-path: 'C:\Program Files (x86)\Microsoft Visual Studio\Installer'  
+
+    - name: MSBuild
+      working-directory: src
+      continue-on-error: true
+      run: msbuild MsTestWorkflow.csproj
+
+    - name: MSTest
+      working-directory: src
+      continue-on-error: true
+      run: mstest /testcontainer:TestResult.dll
 
