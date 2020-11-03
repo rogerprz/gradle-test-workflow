@@ -22,6 +22,9 @@ jobs:
       uses: microsoft/setup-msbuild@v1.0.2
       with: 
         vswhere-path: 'C:\Program Files (x86)\Microsoft Visual Studio\Installer'
-  
+      
+    - name: MSTest Help
+      run: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /help' 
+
     - name: MSTest
-      run: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /resultsFile:c:\temp\myresults.trx'
+      run: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /testfiles:MsTestWorkflow.dll /resultsFile:c:\temp\myresults.trx'
