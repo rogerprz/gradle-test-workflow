@@ -39,7 +39,7 @@ jobs:
       run: msbuild MSTestWorkflow/MsTestWorkflow.csproj -restore
 
     - name: MSTest
-      working-directory: src
+#       working-directory: src
       continue-on-error: true
       run: mstest /testcontainer:TestResult.dll
 
