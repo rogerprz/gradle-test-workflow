@@ -43,5 +43,5 @@ jobs:
 
     - name: MSTest
 #       working-directory: src
-      run:  '$MSTEST /resultsfile:TestResult.txt'
+      run:  '"$MSTEST" /resultsfile:TestResult.txt'
 
