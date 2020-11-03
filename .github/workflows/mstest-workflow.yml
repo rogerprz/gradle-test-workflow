@@ -26,6 +26,7 @@ jobs:
     - name: MSBuild
       working-directory: src
       continue-on-error: true
+      shell: cmd
       run: msbuild MSTestWorkflow/MsTestWorkflow.csproj
 
     - name: Run MsTest
