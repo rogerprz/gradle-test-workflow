@@ -21,7 +21,7 @@ jobs:
     - name: setup-msbuild
       uses: microsoft/setup-msbuild@v1
     - name: find-mstest
-      run: echo "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe"
+      run: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /help'
     - name: Run msbuild
       shell: cmd
       run: msbuild MSTestWorkflow/MsTestWorkflow.csproj -restore -p:OutputDir=C:\MySolutionOutput;ContinueOnError=true
