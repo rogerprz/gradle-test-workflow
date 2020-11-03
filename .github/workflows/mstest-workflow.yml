@@ -18,30 +18,10 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     
-#     - name: Dependency - setup-msbuild
-#       uses: microsoft/setup-msbuild@v1
-#     - name: find-mstest
-#       run: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /help'
-#     - name: Run msbuild
-#       shell: cmd
-#       run: msbuild MSTestWorkflow/MsTestWorkflow.csproj -restore -p:OutputDir=C:\MySolutionOutput;ContinueOnError=true
-
-#       with: 
-#         vswhere-path: 'C:\Program Files (x86)\Microsoft Visual Studio\Common7\IDE\MSTest.exe' 
-  
-      env: 
-        MSTEST: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe"'
-
-    - name: Dependency - MSBuild
+    - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1.0.2
-      with:
-        vswhere-path: 'C:\Program Files (x86)\Microsoft Visual Studio\Installer' 
-
-#     - name: MSBuild
-#       continue-on-error: true
-#       run: msbuild MSTestWorkflow/MsTestWorkflow.csproj -restore
-
+      with: 
+        vswhere-path: 'C:\Program Files (x86)\Microsoft Visual Studio\Installer'
+  
     - name: MSTest
-#       working-directory: src
-      run:  '$MSTEST /help'
-
+      run: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /help'
