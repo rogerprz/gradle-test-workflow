@@ -28,18 +28,20 @@ jobs:
 
 #       with: 
 #         vswhere-path: 'C:\Program Files (x86)\Microsoft Visual Studio\Common7\IDE\MSTest.exe' 
-    
+      env: 
+        MS_TEST: 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\MSTest.exe'
+
     - name: Dependency - MSBuild
       uses: microsoft/setup-msbuild@v1.0.2
       with:
         vswhere-path: 'C:\Program Files (x86)\Microsoft Visual Studio\Installer'  
 
-    - name: MSBuild
-      continue-on-error: true
-      run: msbuild MSTestWorkflow/MsTestWorkflow.csproj -restore
+#     - name: MSBuild
+#       continue-on-error: true
+#       run: msbuild MSTestWorkflow/MsTestWorkflow.csproj -restore
 
     - name: MSTest
 #       working-directory: src
       continue-on-error: false
-      run: mstest /testcontainer:TestResult.dll
+      run:  '"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\MSTest.exe" /testcontainer:TestResult.dll'
 
