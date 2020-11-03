@@ -27,4 +27,4 @@ jobs:
       run: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /help' 
 
     - name: MSTest
-      run: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /testfiles:MsTestWorkflow.dll /resultsFile:c:\temp\myresults.trx'
+      run: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /testfiles:MSTestWorkflow\MsTestWorkflow\bin\Debug\netcoreapp3.1\*.dll /resultsFile:c:\temp\myresults.trx'
