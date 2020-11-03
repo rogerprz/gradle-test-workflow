@@ -40,6 +40,6 @@ jobs:
 
     - name: MSTest
 #       working-directory: src
-      continue-on-error: true
+      continue-on-error: false
       run: mstest /testcontainer:TestResult.dll
 
