@@ -18,11 +18,18 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     
-    - name: setup-msbuild
+    - name: Dependency - setup-msbuild
       uses: microsoft/setup-msbuild@v1
-    - name: find-mstest
-      run: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /help'
-    - name: Run msbuild
-      shell: cmd
-      run: msbuild MSTestWorkflow/MsTestWorkflow.csproj -restore -p:OutputDir=C:\MySolutionOutput;ContinueOnError=true
+      with: 
+        vswhere-path: 'C:\Program Files (x86)\Microsoft Visual Studio\Installer' 
+#     - name: find-mstest
+#       run: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /help'
+    - name: Run MsTest
+      working-directory: src
+      continue-on-error: true
+      run: mstest /testcontainer:TestResult.trx
+
+#     - name: Run msbuild
+#       shell: cmd
+#       run: msbuild MSTestWorkflow/MsTestWorkflow.csproj -restore -p:OutputDir=C:\MySolutionOutput;ContinueOnError=true
 
