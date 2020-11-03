@@ -35,9 +35,8 @@ jobs:
         vswhere-path: 'C:\Program Files (x86)\Microsoft Visual Studio\Installer'  
 
     - name: MSBuild
-      working-directory: src
       continue-on-error: true
-      run: msbuild MsTestWorkflow.csproj
+      run: msbuild MSTestWorkflow/MsTestWorkflow.csproj
 
     - name: MSTest
       working-directory: src
