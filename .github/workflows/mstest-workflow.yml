@@ -37,7 +37,7 @@ jobs:
     - name: Dependency - MSBuild
       uses: microsoft/setup-msbuild@v1.0.2
       with:
-        vswhere-path: 'C:\Program Files (x86)\Microsoft Visual Studio\Common7\IDE\MSTest.exe'
+        vswhere-path: 'C:\Program Files (x86)\Microsoft Visual Studio\Installer' 
 
 #     - name: MSBuild
 #       continue-on-error: true
@@ -45,6 +45,5 @@ jobs:
 
     - name: MSTest
 #       working-directory: src
-      continue-on-error: false
-      run:  '"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\MSTest.exe" /testcontainer:TestResult.dll'
+      run:  '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /testcontainer:TestResult.dll'
 
