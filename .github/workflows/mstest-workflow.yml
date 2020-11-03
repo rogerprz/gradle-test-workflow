@@ -29,10 +29,8 @@ jobs:
 #       with: 
 #         vswhere-path: 'C:\Program Files (x86)\Microsoft Visual Studio\Common7\IDE\MSTest.exe' 
   
-  
-  
       env: 
-        MS_TEST: 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\MSTest.exe'
+        MSTEST: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe"'
 
     - name: Dependency - MSBuild
       uses: microsoft/setup-msbuild@v1.0.2
@@ -45,5 +43,5 @@ jobs:
 
     - name: MSTest
 #       working-directory: src
-      run:  '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /resultsfile:TestResult.txt'
+      run:  $MSTEST /resultsfile:TestResult.txt
 
