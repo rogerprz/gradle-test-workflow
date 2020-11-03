@@ -28,4 +28,4 @@ jobs:
       uses: microsoft/setup-msbuild@v1
     - name: Run msbuild
       shell: cmd
-      run: msbuild -restore MSTestWorkflow/MsTestWorkflow.csproj -p:OutputPathBaseDir=C:\MySolutionOutput;ContinueOnError=true /testcontainer:test.dll
+      run: msbuild -restore MSTestWorkflow/MsTestWorkflow.csproj -p:OutputDir=C:\MySolutionOutput;ContinueOnError=true
