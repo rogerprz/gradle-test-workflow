@@ -21,7 +21,7 @@ jobs:
     - name: Dependency - setup-msbuild
       uses: microsoft/setup-msbuild@v1
       with: 
-        vswhere-path: 'C:\Program Files (x86)\Microsoft Visual Studio\Installer'
+        vswhere-path: 'C:\Program Files (x86)\Microsoft Visual Studio\Installer -requires Microsoft.Component.MSBuild -property installationPath -latest' 
     
     - name: MSBuild
       working-directory: src
