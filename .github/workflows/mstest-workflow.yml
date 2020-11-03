@@ -45,5 +45,5 @@ jobs:
 
     - name: MSTest
 #       working-directory: src
-      run:  '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /testcontainer:TestResult.dll'
+      run:  '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /resultsfile:TestResult.txt'
 
