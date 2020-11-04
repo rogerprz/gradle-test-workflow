@@ -24,7 +24,7 @@ jobs:
         vswhere-path: 'C:\Program Files (x86)\Microsoft Visual Studio\Installer'
       
     - name: MSTest Help
-      run: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /help' 
+      run: '"$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /help' 
 
     - name: MSTest
       run: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /testcontainer:**\*.dll /resultsFile:c:\temp\myresults.trx'
