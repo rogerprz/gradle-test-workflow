@@ -26,6 +26,10 @@ jobs:
         echo 2. Multiline shell TWOOO works too
         echo "3. Multiline shell THREE works too"
         mkdir pyFolder
-
-    - name: MSTest Help
-      run: echo '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /help' 
+  
+    - name: Multi-line test
+      shell: powershell
+      run: |2
+  
+        echo "Multiline shell steps works too"
+        ls -lah
