@@ -1,4 +1,4 @@
-name: MS Test Build
+name: Powershell Workflow
 
 on:
   push:
