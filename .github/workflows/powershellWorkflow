@@ -1,0 +1,31 @@
+name: MS Test Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+    runs-on: windows-latest  # For a list of available runner types, refer to
+                             # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    
+    - name: PowerShell
+      shell: powershell
+      run: echo "Hello world"
+      
+    - name: PowerShell Multiline
+      shell: powershell
+      run: |
+        echo "1. Multiline shell steps works too"
+        echo 2. Multiline shell TWOOO works too
+        echo "3. Multiline shell THREE works too"
+        mkdir pyFolder
+
+    - name: MSTest Help
+      run: echo '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /help' 
