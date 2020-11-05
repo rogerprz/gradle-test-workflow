@@ -32,5 +32,6 @@ jobs:
       run: |2
   
         echo "Multiline shell steps works too"
+        Remove-Item 'pyFolder' -Recurse
         mkdir pyFolder
         ls
