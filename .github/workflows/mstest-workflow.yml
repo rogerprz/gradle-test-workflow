@@ -26,4 +26,4 @@ jobs:
 
     - name: MSTest
       shell: powershell
-      run: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe"'
+      run: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /testcontainer:Test.dll /resultsfile:TestResults.trx'
