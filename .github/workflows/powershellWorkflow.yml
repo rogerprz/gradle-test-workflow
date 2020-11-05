@@ -30,8 +30,12 @@ jobs:
     - name: Multi-line test
       shell: powershell
       run: |2
-  
         echo "Multiline shell steps works too"
         Remove-Item 'pyFolder' -Recurse
         mkdir pyFolder
         ls
+        $items = one,two,three
+        foreach ($item in $items)
+        {
+          echo $item
+        }
