@@ -32,4 +32,5 @@ jobs:
       run: |2
   
         echo "Multiline shell steps works too"
-        ls -lah
+        mkdir pyFolder
+        ls
