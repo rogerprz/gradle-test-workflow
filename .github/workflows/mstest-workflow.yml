@@ -20,9 +20,7 @@ jobs:
     
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1.0.2
-      with: 
-        vswhere-path: 'C:\Program Files (x86)\Microsoft Visual Studio\Installer'
-      
+    
     - name: MSTest Help
       run: echo '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /help' 
 
