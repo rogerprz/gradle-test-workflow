@@ -34,7 +34,7 @@ jobs:
         Remove-Item 'pyFolder' -Recurse
         mkdir pyFolder
         ls
-        $items = one,two,three
+        $items = @('one','two','three')
         foreach ($item in $items)
         {
           echo $item
