@@ -17,10 +17,10 @@ jobs:
     
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1.0.2
-    
-    - name: MSTest Help
-      run: echo '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /help' 
 
     - name: MSTest
       shell: powershell
       run: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /testcontainer:Test.dll /resultsfile:TestResults.trx'
+
+    - name: MSTest Help
+      run: echo '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /help' 
