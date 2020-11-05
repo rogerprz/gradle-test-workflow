@@ -27,5 +27,5 @@ jobs:
       run: echo '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /help' 
 
     - name: MSTest
-      shell: cmd
+      shell: powershell
       run: '"$(vswhere -property installationPath)\Common7\IDE\MSTest.exe"'
