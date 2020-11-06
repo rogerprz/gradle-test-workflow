@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v2
     
     - name: PowerShell Out Null Test
-      shell: "PowerShell -Command "& '{0}'" | Out-Null
+      shell: PowerShell -Command "& '{0}'" | Out-Null
       run: echo "Hello world" | Out-Null
       
     - name: PowerShell Multiline
