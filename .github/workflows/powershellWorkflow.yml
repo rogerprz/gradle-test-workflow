@@ -15,8 +15,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     
-    - name: PowerShell
-      shell: powershell
+    - name: PowerShell Out Null Test
+      shell: "PowerShell -Command "& '{0}'" | Out-Null
       run: echo "Hello world" | Out-Null
       
     - name: PowerShell Multiline
@@ -25,7 +25,7 @@ jobs:
         echo "1. Multiline shell steps works too"
         echo 2. Multiline shell TWOOO works too
         echo "3. Multiline shell THREE works too"
-        mkdir pyFolder
+        mkdir pyFolder | Out-Null
   
     - name: Multi-line test
       shell: powershell
