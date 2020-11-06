@@ -17,7 +17,7 @@ jobs:
     
     - name: PowerShell
       shell: powershell
-      run: ech "Hello world" | Out-Null
+      run: echo "Hello world" | Out-Null
       
     - name: PowerShell Multiline
       shell: powershell
