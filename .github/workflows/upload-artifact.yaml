@@ -12,6 +12,9 @@ jobs:
     runs-on: windows-latest  # For a list of available runner types, refer to
 
     steps:
+    - name: Checkout dependency
+      uses: actions/checkout@v2
+      
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@2.274.1
       with:
