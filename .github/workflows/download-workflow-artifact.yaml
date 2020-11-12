@@ -15,6 +15,7 @@ jobs:
     - name: Download Workflow Artifact
       uses: dawidd6/action-download-artifact@v2
       with:
+        github_token: ${{secrets.GITHUB_TOKEN}}
         # Required, workflow file name or ID
         workflow: ./test.yaml # project name
 
