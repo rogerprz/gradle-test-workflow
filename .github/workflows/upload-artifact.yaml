@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - name: Upload a Build Artifact
-      uses: actions/upload-artifact@2
+      uses: actions/upload-artifact@2.274.1
       with:
         name: freestyle-raven
         path: |-
