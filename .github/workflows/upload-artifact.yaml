@@ -1,4 +1,4 @@
-name: Powershell Workflow
+name: Upload Artifact Workflow
 
 on:
   push:
