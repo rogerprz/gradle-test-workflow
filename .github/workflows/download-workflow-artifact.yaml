@@ -15,11 +15,8 @@ jobs:
     - name: Download Workflow Artifact
       uses: dawidd6/action-download-artifact@v2
       with:
-        # Optional, GitHub token
-        github_token: ${{secrets.GITHUB_TOKEN}}
-
         # Required, workflow file name or ID
-        workflow: MSTestWorkflow/.github/workflows/upload-artifact.yaml # project name
+        workflow: ./test.yaml # project name
 
         # SELECTOR
         # Optional, the conclusion of a completed workflow to search for
@@ -45,4 +42,4 @@ jobs:
         # TARGET DIRECTORY || nil
         # Optional, directory where to extract artifact
         path: cagedstyle-raven
-        repo: ${{github.repository}}
+        repo: rogerprz/WorkflowTest2
