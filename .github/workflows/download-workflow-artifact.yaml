@@ -26,7 +26,7 @@ jobs:
         # Can be one of:
         # "failure", "success", "neutral", "cancelled", "skipped", "timed_out", "action_required"
         # Ignores conclusion by default (thus using the most recent completed run when no other option is specified, regardless of conclusion)
-#         workflow_conclusion: success
+        workflow_conclusion: success
         
         # RESEARCH
         # Optional, uploaded artifact name, will download all artifacts if not specified and extract them in respective subdirectories
@@ -35,5 +35,5 @@ jobs:
 
         # TARGET DIRECTORY || nil
         # Optional, directory where to extract artifact
-#         path: cagedstyle-raven
+        path: cagedstyle-raven
 #         repo: rogerprz/WorkflowTesting
