@@ -1,3 +1,4 @@
+name: Download Workflow Artifact
 on:
   push:
     branches: [ main ]
