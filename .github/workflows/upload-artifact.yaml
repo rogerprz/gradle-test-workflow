@@ -21,7 +21,7 @@ jobs:
         name: freestyle-raven
         path: |-
           freestyle-raven
-          path/to/artifact, path/**/*
+          freestyle-raven/*.txt, pokedex/legendary/**.rb
           !artifact-not-to-copy-field
         if-no-files-found: error
         retention-days: 0
