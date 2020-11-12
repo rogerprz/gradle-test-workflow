@@ -19,7 +19,7 @@ jobs:
       with:
         github_token: ${{secrets.GH_TOKEN}}
         # Required, workflow file name or ID
-        workflow: test.yml # project name
+        workflow: foo.yml # project name
 
         # SELECTOR
         # Optional, the conclusion of a completed workflow to search for
