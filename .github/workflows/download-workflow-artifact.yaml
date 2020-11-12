@@ -12,8 +12,6 @@ jobs:
     runs-on: ubuntu-latest  # For a list of available runner types, refer to
 
     steps:
-    - uses: actions/checkout@v2
-
     - name: Download Workflow Artifact
       uses: dawidd6/action-download-artifact@v2
       with:
