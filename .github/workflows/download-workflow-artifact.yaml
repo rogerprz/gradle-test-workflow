@@ -14,11 +14,12 @@ jobs:
     steps:
     - name: Download Workflow Artifact
       uses: dawidd6/action-download-artifact@v2
+      continue-on-error: true 
       with:
         github_token: ${{secrets.GH_TOKEN}}
         # Required, workflow file name or ID
         workflow: foo.yml # project name
-
+        
         # SELECTOR
         # Optional, the conclusion of a completed workflow to search for
         # Can be one of:
