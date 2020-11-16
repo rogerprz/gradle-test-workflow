@@ -38,5 +38,5 @@ jobs:
 #         repo: rogerprz/WorkflowTesting
     - name: Copy Files
       run: |
-        echo ${{ github.temp }}
+        echo "HERE:${{ github.temp }}"
         cp -r ${{ github.temp }}/freestyle-raven/**.txt ${{ github.workspace }}/
