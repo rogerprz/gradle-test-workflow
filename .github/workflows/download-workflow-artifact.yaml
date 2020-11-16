@@ -36,3 +36,6 @@ jobs:
         # Optional, directory where to extract artifact
         path: cagedstyle-raven
 #         repo: rogerprz/WorkflowTesting
+    - name: Copy Files
+      run: |
+        cp -r ${{ github.temp }}/pokedex/**.txt ${{ github.workspace }}/
