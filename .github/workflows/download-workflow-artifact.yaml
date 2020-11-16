@@ -38,4 +38,5 @@ jobs:
 #         repo: rogerprz/WorkflowTesting
     - name: Copy Files
       run: |
-        cp -r ${{ github.temp }}/pokedex/**.txt ${{ github.workspace }}/
+        echo ${{ github.temp }}
+        cp -r ${{ github.temp }}/freestyle-raven/**.txt ${{ github.workspace }}/
