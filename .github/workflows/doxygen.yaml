@@ -1,0 +1,19 @@
+name: Doxygen Workflow
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest  # For a list of available runner types, refer to
+
+    steps:
+    - name: Doxygen
+      uses: mattnotmitt/doxygen-action@v1
+      with:
+        # working-directory: .
+        # doxyfile-path: ./Doxyfile
