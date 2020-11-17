@@ -20,3 +20,8 @@ jobs:
       with:
         working-directory: .
         doxyfile-path: ./Doxyfile
+    - name: run command
+      shell: bash
+      run: |
+        echo "HEREEEE"
+        doxygen Doxyfile
