@@ -22,7 +22,7 @@ jobs:
         cd hello
         pwd # /home/runner/work/try/try/hello
     - name: WORKING DIRECTORY
-      working-directory: "./src"
+      working-directory: ./dbz
       run: |
         pwd
         
