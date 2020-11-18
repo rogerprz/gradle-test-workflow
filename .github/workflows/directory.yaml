@@ -1,0 +1,28 @@
+name: Dir Workflow
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest  # For a list of available runner types, refer to
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      
+    - name: MKDIR & CD
+      run: |
+        pwd # /home/runner/work/try/try
+        mkdir hello
+        cd hello
+        pwd # /home/runner/work/try/try/hello
+    - name: WORKING DIRECTORY
+      working-directory: "./src"
+      run: |
+        pwd
+        
