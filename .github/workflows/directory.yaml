@@ -25,5 +25,5 @@ jobs:
       working-directory: $project_dir
       run: echo $project_dir
       env: 
-        projec_dir: "./dbz"
+        project_dir: "./dbz"
         
