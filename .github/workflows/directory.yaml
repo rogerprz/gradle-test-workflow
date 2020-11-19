@@ -23,7 +23,7 @@ jobs:
         pwd # /home/runner/work/try/try/hello
     - name: WORKING DIRECTORY
       working-directory: $project_dir
-      run: pwd
+      run: echo $project_dir
       env: 
         projec_dir: "./dbz"
         
