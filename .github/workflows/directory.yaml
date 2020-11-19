@@ -28,4 +28,11 @@ jobs:
         echo $project_dir
       env: 
         project_dir: "./dbz"
+    - name: WORKING DIRECTORY 2
+      working-directory: $project
+      run: |
+        pwd
+        echo $project
+      env: 
+        project: ./dbz
         
