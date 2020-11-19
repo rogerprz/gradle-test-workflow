@@ -24,7 +24,6 @@ jobs:
     - name: WORKING DIRECTORY 2
       working-directory: $project
       run: |
-        pwd
         # $project
         echo "HELLO"
       env: 
