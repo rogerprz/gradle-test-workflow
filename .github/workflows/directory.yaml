@@ -27,7 +27,7 @@ jobs:
         # $project
         echo "HELLO"
       env: 
-        project: "${{ github.workspace }}/dbz"
+        project: "${{ github.workspace }}/dbz/"
         
 #     - name: WORKING DIRECTORY
 #       working-directory: $project_dir
