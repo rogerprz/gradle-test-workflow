@@ -21,13 +21,6 @@ jobs:
         mkdir hello
         cd hello
         pwd # /home/runner/work/try/try/hello
-    - name: WORKING DIRECTORY
-      working-directory: $project_dir
-      run: |
-        pwd
-        echo "HERE: $project_dir"
-      env: 
-        project_dir: "./dbz"
     - name: WORKING DIRECTORY 2
       working-directory: $project
       run: |
@@ -37,3 +30,11 @@ jobs:
       env: 
         project: ./dbz
         
+    - name: WORKING DIRECTORY
+      working-directory: $project_dir
+      run: |
+        pwd
+        echo "HERE: $project_dir"
+      env: 
+        project_dir: "./dbz"
+    
