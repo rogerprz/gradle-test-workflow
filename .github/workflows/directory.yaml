@@ -23,11 +23,11 @@ jobs:
         pwd # /home/runner/work/try/try/hello
     - name: WORKING DIRECTORY 2
       env: 
-        project: "${{ github.workspace }}/dbz/"
+        project: "./dbz/"
       run: |
         # $project
         echo "HELLO"
-      working-directory: $project
+      working-directory: ./dbz
         
 #     - name: WORKING DIRECTORY
 #       working-directory: $project_dir
