@@ -22,12 +22,12 @@ jobs:
         cd hello
         pwd # /home/runner/work/try/try/hello
     - name: WORKING DIRECTORY 2
-      working-directory: $project
+      env: 
+        project: "${{ github.workspace }}/dbz/"
       run: |
         # $project
         echo "HELLO"
-      env: 
-        project: "${{ github.workspace }}/dbz/"
+      working-directory: $project
         
 #     - name: WORKING DIRECTORY
 #       working-directory: $project_dir
