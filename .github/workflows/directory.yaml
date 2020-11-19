@@ -25,7 +25,7 @@ jobs:
       working-directory: $project_dir
       run: |
         pwd
-        echo $project_dir
+        echo "HERE: $project_dir"
       env: 
         project_dir: "./dbz"
     - name: WORKING DIRECTORY 2
@@ -33,6 +33,7 @@ jobs:
       run: |
         pwd
         echo $project
+        echo "HELLO"
       env: 
         project: ./dbz
         
