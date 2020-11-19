@@ -25,16 +25,16 @@ jobs:
       working-directory: $project
       run: |
         pwd
-        echo $project
+        # $project
         echo "HELLO"
       env: 
         project: ${{ github.workspace }}
         
-    - name: WORKING DIRECTORY
-      working-directory: $project_dir
-      run: |
-        pwd
-        echo "HERE: $project_dir"
-      env: 
-        project_dir: "./dbz"
+#     - name: WORKING DIRECTORY
+#       working-directory: $project_dir
+#       run: |
+#         pwd
+#         echo "HERE: $project_dir"
+#       env: 
+#         project_dir: "./dbz"
     
