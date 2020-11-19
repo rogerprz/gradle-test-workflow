@@ -22,7 +22,8 @@ jobs:
         cd hello
         pwd # /home/runner/work/try/try/hello
     - name: WORKING DIRECTORY
-      working-directory: ./dbz
-      run: |
-        pwd
+      working-directory: $project_dir
+      run: pwd
+      env: 
+        projec_dir: "./dbz"
         
