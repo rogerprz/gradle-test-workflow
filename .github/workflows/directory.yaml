@@ -15,19 +15,19 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       
-    - name: MKDIR & CD
-      run: |
-        pwd # /home/runner/work/try/try
-        mkdir hello
-        cd hello
-        pwd # /home/runner/work/try/try/hello
-    - name: WORKING DIRECTORY 2
+#     - name: MKDIR & CD
+#       run: |
+#         pwd # /home/runner/work/try/try
+#         mkdir hello
+#         cd hello
+#         pwd # /home/runner/work/try/try/hello
+    - name: WORKING DIRECTORY
       env: 
         project: ./dbz
       run: |
         echo env."${project}"
         echo "HELLO"
-      working-directory: ./dbz
+      working-directory: $project
         
 #     - name: WORKING DIRECTORY
 #       working-directory: $project_dir
