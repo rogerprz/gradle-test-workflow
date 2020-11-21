@@ -27,7 +27,7 @@ jobs:
       run: |
         # $project
         echo "HELLO"
-      working-directory: ./dbz
+      working-directory: "${project}"
         
 #     - name: WORKING DIRECTORY
 #       working-directory: $project_dir
