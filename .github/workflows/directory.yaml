@@ -27,7 +27,7 @@ jobs:
       run: |
         echo env."${project}"
         echo "HELLO"
-      working-directory: env."${project}"
+      working-directory: ./dbz
         
 #     - name: WORKING DIRECTORY
 #       working-directory: $project_dir
