@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest  # For a list of available runner types, refer to
 
     steps:
+    - working-directory: ./dbz
     - name: Checkout
       uses: actions/checkout@v2
       
@@ -27,7 +28,6 @@ jobs:
       run: |
         echo env."${project}"
         echo "HELLO"
-      working-directory: "${project}"
         
 #     - name: WORKING DIRECTORY
 #       working-directory: $project_dir
