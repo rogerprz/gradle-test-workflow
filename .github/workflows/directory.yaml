@@ -27,7 +27,7 @@ jobs:
       env: 
         project: "./dbz"
       run: echo "HELLO WORLD"
-      working-directory: $project
+      working-directory: ${{env.project}}
         
 #     - name: WORKING DIRECTORY
 #       working-directory: $project_dir
