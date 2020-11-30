@@ -26,9 +26,7 @@ jobs:
     - name: WORKING DIRECTORY
       env: 
         project: "./dbz"
-      run: |
-        echo "WORLD"
-        echo "HELLO"
+      run: echo "HELLO WORLD"
       working-directory: $project
         
 #     - name: WORKING DIRECTORY
