@@ -10,10 +10,9 @@ jobs:
 
   build:
     runs-on: ubuntu-latest  # For a list of available runner types, refer to
-
+    env: 
+      project: ./dbz
     steps:
-    - env: 
-        project: ./dbz
     - name: Checkout
       uses: actions/checkout@v2
 #       working-directory: ./dbz
