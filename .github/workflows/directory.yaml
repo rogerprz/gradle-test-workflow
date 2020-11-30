@@ -25,7 +25,7 @@ jobs:
 #         pwd # /home/runner/work/try/try/hello
     - name: WORKING DIRECTORY
       env: 
-        project: ./dbz
+        project: "./dbz"
       run: |
         echo "WORLD"
         echo "HELLO"
