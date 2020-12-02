@@ -1,0 +1,66 @@
+name: UploadArtifact Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest  # For a list of available runner types, refer to
+    env: 
+      project: ./dbz
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      
+    - name: MKDIR & CD
+      run: |
+        pwd # /home/runner/work/try/try
+        mkdir hello
+        cd hello
+        pwd # /home/runner/work/try/try/hello
+    steps:
+    - name: Archive Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        path: |-
+          build/libs/**/*.jar
+          !old/path/
+          !**/*~
+          !**/#*#
+          !**/.#*
+          !**/%*%
+          !**/._*
+          !**/CVS
+          !**/CVS/**
+          !**/.cvsignore
+          !**/SCCS
+          !**/SCCS/**
+          !**/vssver.scc
+          !**/.svn
+          !**/.svn/**
+          !**/.DS_Store
+          !**/.git
+          !**/.git/**
+          !**/.gitattributes
+          !**/.gitignore
+          !**/.gitmodules
+          !**/.hg
+          !**/.hg/**
+          !**/.hgignore
+          !**/.hgsub
+          !**/.hgsubstate
+          !**/.hgtags
+          !**/.bzr
+          !**/.bzr/**
+          !**/.bzrignore
+        if-no-files-found: ignore
+      if: "${{ success() }}"
+    - name: Archive Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        path: PATH/HERE
+        if-no-files-found: fail
