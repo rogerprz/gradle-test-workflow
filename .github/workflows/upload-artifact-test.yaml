@@ -22,7 +22,6 @@ jobs:
         mkdir hello
         cd hello
         pwd # /home/runner/work/try/try/hello
-    steps:
     - name: Archive Artifacts
       uses: actions/upload-artifact@v2
       with:
