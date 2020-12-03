@@ -1,4 +1,4 @@
-name: Dir Workflow
+name: Directory
 
 on:
   push:
