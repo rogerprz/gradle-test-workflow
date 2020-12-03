@@ -16,14 +16,14 @@ jobs:
       
     - name: Create Artifact files
       run: |
-        echo > "include.txt"
-        echo "archive/path" >> "include.txt"
-        echo "temple/path/two" >> "include.txt"
+        "echo > include.txt"
+        #echo "archive/path" >> "include.txt"
+        # echo "temple/path/two" >> "include.txt"
         # echo "tower/path" >> "${{ github.workspace }}/include.txt"
         
-        echo > "exclude.txt
-        echo "base/path" >> "include.txt"
-        echo "archive/path" >> "exclude.txt"
+       # echo > "exclude.txt
+        #echo "base/path" >> "include.txt"
+       # echo "archive/path" >> "exclude.txt"
         
     - name: Tar files
       run: "tar -c --exclude-from='exclude.txt' --files-from='include.txt' my-artifact.tar"
