@@ -16,6 +16,7 @@ jobs:
       
     - name: Create Artifact files
       run: |
+        touch "./tmp/include.txt ./tmp/exclude.txt"
         echo "archive/path" >> "./tmp/include.txt"
         echo "temple/path/two" >> "./tmp/include.txt"
         # echo "tower/path" >> "${{ github.workspace }}/include.txt"
