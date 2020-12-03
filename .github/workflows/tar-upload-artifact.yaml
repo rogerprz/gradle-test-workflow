@@ -16,7 +16,7 @@ jobs:
       
     - name: Create Artifact files
       run: |
-        "echo 'some_text' >> 'include.txt'"
+       echo some_text >> include.txt
         #echo "archive/path" >> "include.txt"
         # echo "temple/path/two" >> "include.txt"
         # echo "tower/path" >> "${{ github.workspace }}/include.txt"
