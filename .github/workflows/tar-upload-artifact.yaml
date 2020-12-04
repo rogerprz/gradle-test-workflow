@@ -20,8 +20,12 @@ jobs:
        echo 'temple/path/two' >> include.txt
        echo 'base/path' >> include.txt
        echo 'archive/path' >> exclude.txt
+       echo "HEREEEE"
+       echo include.txt
+       echo exclude.txt
       # echo tower/path >> "${{ github.workspace }}/include.txt" 
 #        echo > "exclude.txt
+
       
         
 #     - name: Tar files
