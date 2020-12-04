@@ -15,6 +15,11 @@ jobs:
       run: |-
         echo archive/ >> include.txt
         echo old/path/ >> exclude.txt
+        echo "START"
+        cat include.txt
+        echo "MID"
+        cat exclude.txt
+        echo "END"
         echo **/*~ >> exclude.txt
 #         echo !**/#*# >> exclude.txt
 #         echo !**/.#* >> exclude.txt
