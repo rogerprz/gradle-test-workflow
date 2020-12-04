@@ -49,7 +49,7 @@ jobs:
 #         echo !**/.bzr/** >> exclude.txt
 #         echo !**/.bzrignore >> exclude.txt
     - name: Create Tar
-      run: "tar c --exclude-from=exclude.txt --files-from=include.txt -f artifacts.tar"
+      run: "tar --exclude-from=exclude.txt --files-from=include.txt -cf artifacts.tar"
     - name: Upload Artifacts
       uses: actions/upload-artifact@v2
       with:
