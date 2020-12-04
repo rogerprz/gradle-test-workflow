@@ -18,10 +18,11 @@ jobs:
       run: |
        echo archive/path >> include.txt
        echo 'temple/path/two' >> include.txt
+       echo 'base/path' >> include.txt
+       echo 'archive/path' >> exclude.txt
       # echo tower/path >> "${{ github.workspace }}/include.txt" 
 #        echo > "exclude.txt
-       echo 'base/path' >> include.txt
-       # echo "archive/path" >> "exclude.txt"
+      
         
 #     - name: Tar files
 #       run: "tar -c --exclude-from='exclude.txt' --files-from='include.txt' my-artifact.tar"
