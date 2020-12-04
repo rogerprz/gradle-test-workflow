@@ -13,7 +13,7 @@ jobs:
     steps:
     - name: Create Artifact files
       run: |-
-        echo archive/ >> include.txt
+        echo archive/path >> include.txt
         echo old/path/ >> exclude.txt
         echo "START"
         cat include.txt
@@ -22,7 +22,7 @@ jobs:
         echo "END"
 
     - name: Create Tar
-      run: "tar --exclude-from=exclude.txt --files-from=include.txt -cf artifacts.tar"
+      run: "tar -c --exclude-from=exclude.txt --files-from=include.txt -f artifacts.tar"
     - name: Upload Artifacts
       uses: actions/upload-artifact@v2
       with:
