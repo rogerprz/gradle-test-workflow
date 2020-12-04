@@ -26,14 +26,12 @@ jobs:
        echo "END HERE"
       # echo tower/path >> "${{ github.workspace }}/include.txt" 
 #        echo > "exclude.txt
-
       
-        
-#     - name: Tar files
-#       run: "tar -c --exclude-from='exclude.txt' --files-from='include.txt' my-artifact.tar"
+    - name: Tar files
+      run: "tar -c --exclude-from=exclude.txt --files-from=include.txt my-artifact.tar"
     
-#     - name: Archive Artifacts
-#       uses: actions/upload-artifact@v2
-#       with:
-#         name: My Artifact
-#         path: "my-artifact.tar"    
+    - name: Archive Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: My Artifact
+        path: "my-artifact.tar"    
