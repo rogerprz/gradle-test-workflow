@@ -13,8 +13,8 @@ jobs:
     steps:
     - name: Create Artifacts files
       run: |-
-        echo build/libs/**/*.jar >> include.txt
-        echo old/path/ >> excludes.txt
+        echo archive/path >> include.txt
+        echo base/path/ >> excludes.txt
         echo !**/*~ >> excludes.txt
         echo !**/#*# >> excludes.txt
         echo !**/.#* >> excludes.txt
