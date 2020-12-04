@@ -16,7 +16,8 @@ jobs:
     - name: Create Artifacts files
       run: |-
         echo archive/** >> include.txt
-        echo ${{ github.workspace }} >> exclude.txt
+        echo "${{ github.workspace }}" >> include.txt
+        echo old/path >> exclude.txt
         echo !**/*~ >> exclude.txt
         echo !**/#*# >> exclude.txt
         echo !**/.#* >> exclude.txt
