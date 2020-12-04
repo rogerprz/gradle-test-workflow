@@ -20,18 +20,10 @@ jobs:
         echo "MID"
         cat exclude.txt
         echo "END"
-    - name: Create Artifact files
-      run: |-
-        echo "PRINT"
-        cat include.txt
-        echo "MID"
-        cat exclude.txt
-        echo "END"
-
-#     - name: Create Tar
-#       run: "tar -c --exclude-from=exclude.txt --files-from=include.txt -f artifacts.tar"
-#     - name: Upload Artifacts
-#       uses: actions/upload-artifact@v2
-#       with:
-#         name: Archive Tar
-#         path: artifacts.tar
+    - name: Create Tar
+      run: "tar -c --exclude-from=exclude.txt --files-from=include.txt -f artifacts.tar"
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: Archive Tar
+        path: artifacts.tar
