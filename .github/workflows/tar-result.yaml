@@ -20,7 +20,7 @@ jobs:
         echo "MID"
         cat exclude.txt
         echo "END"
-        echo **/*~ >> exclude.txt
+#         echo **/*~ >> exclude.txt
 #         echo !**/#*# >> exclude.txt
 #         echo !**/.#* >> exclude.txt
 #         echo !**/%*% >> exclude.txt
