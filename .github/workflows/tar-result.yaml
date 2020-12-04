@@ -13,7 +13,7 @@ jobs:
     steps:
     - name: Create Artifact files
       run: |
-        echo dbz >> include.txt
+        echo ./dbz >> include.txt
         echo !**/*~ >> excludes.txt
         echo !**/#*# >> excludes.txt
         echo !**/.#* >> excludes.txt
