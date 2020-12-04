@@ -15,7 +15,7 @@ jobs:
       run: |-
         echo archive/ >> include.txt
         echo old/path/ >> exclude.txt
-#         echo !**/*~ >> exclude.txt
+        echo !**/*~ >> exclude.txt
 #         echo !**/#*# >> exclude.txt
 #         echo !**/.#* >> exclude.txt
 #         echo !**/%*% >> exclude.txt
