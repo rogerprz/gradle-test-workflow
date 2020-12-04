@@ -21,8 +21,9 @@ jobs:
        echo 'base/path' >> include.txt
        echo 'archive/path' >> exclude.txt
        echo "HEREEEE"
-       echo include.txt
-       echo exclude.txt
+       cat include.txt
+       cat exclude.txt
+       echo "END HERE"
       # echo tower/path >> "${{ github.workspace }}/include.txt" 
 #        echo > "exclude.txt
 
