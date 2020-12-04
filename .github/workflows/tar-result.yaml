@@ -13,8 +13,8 @@ jobs:
     steps:
     - name: Create Artifact files
       run: |-
-        echo 'archive/path/' >> include.txt
-        echo 'base/path/' >> excludes.txt
+        echo archive/** >> include.txt
+        echo old/path/ >> exclude.txt
         echo !**/*~ >> excludes.txt
         echo !**/#*# >> excludes.txt
         echo !**/.#* >> excludes.txt
@@ -31,18 +31,6 @@ jobs:
         echo !**/.DS_Store >> excludes.txt
         echo !**/.git >> excludes.txt
         echo !**/.git/** >> excludes.txt
-        echo !**/.gitattributes >> excludes.txt
-        echo !**/.gitignore >> excludes.txt
-        echo !**/.gitmodules >> excludes.txt
-        echo !**/.hg >> excludes.txt
-        echo !**/.hg/** >> excludes.txt
-        echo !**/.hgignore >> excludes.txt
-        echo !**/.hgsub >> excludes.txt
-        echo !**/.hgsubstate >> excludes.txt
-        echo !**/.hgtags >> excludes.txt
-        echo !**/.bzr >> excludes.txt
-        echo !**/.bzr/** >> excludes.txt
-        echo !**/.bzrignore >> excludes.txt
     - name: Create Tar
       run: tar -c --exclude-from=excludes.txt --files-from=include.txt -f artifacts.tar
     - name: Upload Artifacts
