@@ -28,7 +28,7 @@ jobs:
 #        echo > "exclude.txt
       
     - name: Tar files
-      run: "tar -c --exclude-from=exclude.txt --files-from=include.txt artifact.tar"
+      run: "tar -c --exclude-from=exclude.txt --files-from=include.txt -f artifact.tar"
     
     - name: Archive Artifacts
       uses: actions/upload-artifact@v2
