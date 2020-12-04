@@ -13,7 +13,7 @@ jobs:
     steps:
     - name: Create Artifact files
       run: |-
-        echo archive/** >> include.txt
+        echo archive/ >> include.txt
         echo old/path/ >> exclude.txt
 #         echo !**/*~ >> exclude.txt
 #         echo !**/#*# >> exclude.txt
