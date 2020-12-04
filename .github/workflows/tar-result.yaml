@@ -20,34 +20,7 @@ jobs:
         echo "MID"
         cat exclude.txt
         echo "END"
-#         echo **/*~ >> exclude.txt
-#         echo !**/#*# >> exclude.txt
-#         echo !**/.#* >> exclude.txt
-#         echo !**/%*% >> exclude.txt
-#         echo !**/._* >> exclude.txt
-#         echo !**/CVS >> exclude.txt
-#         echo !**/CVS/** >> exclude.txt
-#         echo !**/.cvsignore >> exclude.txt
-#         echo !**/SCCS >> exclude.txt
-#         echo !**/SCCS/** >> exclude.txt
-#         echo !**/vssver.scc >> exclude.txt
-#         echo !**/.svn >> exclude.txt
-#         echo !**/.svn/** >> exclude.txt
-#         echo !**/.DS_Store >> exclude.txt
-#         echo !**/.git >> exclude.txt
-#         echo !**/.git/** >> exclude.txt
-#         echo !**/.gitattributes >> exclude.txt
-#         echo !**/.gitignore >> exclude.txt
-#         echo !**/.gitmodules >> exclude.txt
-#         echo !**/.hg >> exclude.txt
-#         echo !**/.hg/** >> exclude.txt
-#         echo !**/.hgignore >> exclude.txt
-#         echo !**/.hgsub >> exclude.txt
-#         echo !**/.hgsubstate >> exclude.txt
-#         echo !**/.hgtags >> exclude.txt
-#         echo !**/.bzr >> exclude.txt
-#         echo !**/.bzr/** >> exclude.txt
-#         echo !**/.bzrignore >> exclude.txt
+
     - name: Create Tar
       run: "tar --exclude-from=exclude.txt --files-from=include.txt -cf artifacts.tar"
     - name: Upload Artifacts
