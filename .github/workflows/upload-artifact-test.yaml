@@ -57,7 +57,7 @@ jobs:
           !**/.bzr/**
           !**/.bzrignore
         if-no-files-found: ignore
-      if: "${{ success() }}"
+      if: "always()"
     - name: Archive Artifacts
       uses: actions/upload-artifact@v2
       with:
