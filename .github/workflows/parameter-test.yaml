@@ -1,4 +1,4 @@
-name: converted jenkins pipeline
+name: Parameter Test
 on:
   workflow_dispatch:
     inputs:
