@@ -1,0 +1,19 @@
+name: Echo if test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+    runs-on: windows-latest  # For a list of available runner types, refer to
+
+    steps:
+    - name: run command
+      shell: bash
+      run: echo "hey there"
+      if:
+    
