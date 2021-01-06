@@ -16,4 +16,8 @@ jobs:
       shell: bash
       run: echo "hey there"
       if:
+    - name: run command two
+      shell: bash
+      run: echo "number two"
+      if:
     
