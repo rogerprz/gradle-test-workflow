@@ -17,4 +17,5 @@ jobs:
         with:
           java-version: 1.8
       - name: Build with Maven
-        run: mvn --batch-mode --update-snapshots verify
+#         run: mvn --batch-mode --update-snapshots verify
+        run: mvn -Dname1=value1 clean site install
