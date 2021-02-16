@@ -15,7 +15,7 @@ jobs:
     - name: clean workspace
       shell: bash
       run: |-
-        #!/usr/bin/env ruby
+        #"!/usr/bin/env ruby"
         require "fileutils"
         Dir.chdir(ENV["GITHUB_WORKSPACE"]) do
           paths = Dir.glob(["node_modules/"])
