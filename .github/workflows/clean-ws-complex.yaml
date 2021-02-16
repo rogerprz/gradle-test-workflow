@@ -13,9 +13,8 @@ jobs:
     - name: checkout
       uses: actions/checkout@v2
     - name: clean workspace
-      shell: bash
+      shell: ruby {0}
       run: |-
-        #"!/usr/bin/env ruby"
         require "fileutils"
         Dir.chdir(ENV["GITHUB_WORKSPACE"]) do
           paths = Dir.glob(["node_modules/"])
