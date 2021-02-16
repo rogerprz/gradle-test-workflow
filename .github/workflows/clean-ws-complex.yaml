@@ -1,0 +1,27 @@
+name: Clean Workspace complex
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+    - name: clean workspace
+      shell: bash
+      run: |-
+        #!/usr/bin/env ruby
+        require "fileutils"
+        Dir.chdir(ENV["GITHUB_WORKSPACE"]) do
+          paths = Dir.glob(["node_modules/"])
+          paths -= Dir.glob(["src/"])
+          paths.each do |path|
+            File.delete(path) if File.file?(path)
+            FileUtils.rm_rf(path) if File.directory?(path)
+          end
+        end
