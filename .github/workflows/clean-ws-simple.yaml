@@ -1,0 +1,17 @@
+name: Clean Workspace simple
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+    - name: clean workspace
+      shell: bash
+      run: rm -rf ${{ github.workspace }}/*
