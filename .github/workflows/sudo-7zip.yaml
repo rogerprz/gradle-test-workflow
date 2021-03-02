@@ -19,10 +19,6 @@ jobs:
     - name: 7z files
       run:  7z a -mx=9 archive_yaml_file.7z root7z_yaml_folder
     - name: Run echo
-      run: |
-      echo "We are here"
-      echo 7z
-      7z
-      
+      run: echo "we are here"
       
    
