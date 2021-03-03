@@ -17,7 +17,7 @@ jobs:
     - name: Install 7z
       run:  sudo apt-get install p7zip-full
     - name: 7z files
-      run:  7z a -mx=9 u archive.7z archive
+      run:  7z u -mx=9 archive.7z archive
     - name: Run echo
       run: echo "we are here"
     - name: Tar files
