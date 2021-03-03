@@ -1,4 +1,4 @@
-name: Sudo 7zip
+name: ADO ArchiveFiles
 
 on:
   push:
