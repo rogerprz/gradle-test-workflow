@@ -1,0 +1,20 @@
+name: test-pipeline.yml
+on:
+  push:
+    branches:
+    - main
+jobs:
+  __default-Job:
+    runs-on: macos-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+    - name: Install zip
+      run: sudo apt-get install zip
+    - name: Zip files
+      run: zip -r -u -v $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip $(Build.BinariesDirectory)
+    - run: echo "This is an echo message"
+    - name: Hello world
+      run: echo "message from powershell"
+      shell: powershell
+      working-directory: root
