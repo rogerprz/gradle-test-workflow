@@ -21,7 +21,7 @@ jobs:
     - name: Run echo
       run: echo "we are here"
     - name: Tar files
-      run: tar -cf -x archive.tar archive
+      run: tar -x -cf archive.tar archive
     - name: Install zip
       run: sudo apt-get install zip
     - name: Zip files
