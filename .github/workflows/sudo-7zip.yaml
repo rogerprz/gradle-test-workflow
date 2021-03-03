@@ -20,5 +20,11 @@ jobs:
       run:  7z a -mx=9 archive.7z archive
     - name: Run echo
       run: echo "we are here"
+    - name: Tar files
+      run: tar -cxf archive.tar archive
+    - name: Install zip
+      run: sudo apt-get install zip
+    - name: Zip files
+      run:  zip -r -u archive.zip archive
       
    
