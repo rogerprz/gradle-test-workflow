@@ -23,7 +23,7 @@ jobs:
       run: 7z u -mx=9 archive.7z archive
       if: success() || failure()
     - name: Tar files
-      run: tar -cf archive.tar archive --overwrite
+      run: tar -cf archive.tar archive
       if: success() || failure()
     - name: ZIP files
       run: zip -r -u archive.zip archive
