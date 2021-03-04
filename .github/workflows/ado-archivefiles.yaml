@@ -22,14 +22,14 @@ jobs:
       run: echo archive.zip
     - name: 7z install and compress files
       run: 7z u -mx=9 archive.7z archive
-      if: success() || failed()
+      if: success() || failure()
     - name: Tar files
       run: tar -cf archive.tar archive --overwrite
-      if: success() || failed()
+      if: success() || failure()
     - name: Install and zip files
       run:  |-
         sudo apt-get install zip
         zip -r -u archive.zip archive
-      if: success() || failed()
+      if: success() || failure()
       
    
