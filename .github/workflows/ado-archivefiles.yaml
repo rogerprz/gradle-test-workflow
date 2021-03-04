@@ -13,15 +13,18 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-      
-    
+    - name: Action Zip
+      uses: papeloto/action-zip@v1
+      with:
+        files: archive
+        dest: archive.zip
+    - name: Echo message
+      run: echo archive.zip
     - name: 7z install and compress files
       run:  |-
         sudo apt-get install p7zip-full
         7z u -mx=9 archive.7z archive
       continue-on-error: true
-    - name: Run echo
-      run: echo "we are here"
     - name: Tar files
       run: tar -cf archive.tar archive --overwrite
       continue-on-error: true
