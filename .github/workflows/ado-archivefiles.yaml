@@ -21,9 +21,7 @@ jobs:
     - name: Echo message
       run: echo archive.zip
     - name: 7z install and compress files
-      run:  |-
-        sudo apt-get install p7zip-full
-        7z u -mx=9 archive.7z archive
+      run: 7z u -mx=9 archive.7z archive
       if: succeeded() || failed()
     - name: Tar files
       run: tar -cf archive.tar archive --overwrite
