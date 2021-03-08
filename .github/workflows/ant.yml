@@ -17,4 +17,4 @@ jobs:
         with:
           java-version: 1.11
       - name: Build with Ant
-        run: ant -Property1=Value1 -buildfile build.xml
+        run: ant -Dfile1=file1 -buildfile build.xml
