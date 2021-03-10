@@ -1,43 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- a description of the JUnit XML format and how Jenkins parses it. See also junit.xsd -->
-
-<!-- if only a single testsuite element is present, the testsuites
-     element can be omitted. All attributes are optional. -->
-<testsuites name="test-suites-name" >
-
-  <!-- testsuite can appear multiple times, if contained in a testsuites element.
-       It can also be the root element. -->
-  <testsuite name="testsuite-name" tests="1">
-
-    <!-- Properties (e.g., environment settings) set during test
-     execution. The properties element can appear 0 or once. -->
-    <properties>
-      <!-- property can appear multiple times. The name and value attributres are required. -->
-      <property name="" value=""/>
-    </properties>
-
-    <!-- testcase can appear multiple times, see /testsuites/testsuite@tests -->
-    <testcase name="case-name" >
-
-      <!-- If the test was not executed or failed, you can specify one
-           the skipped, error or failure elements. -->
-
-      
-      <error message="error- message"></error>
-
-  
-      <failure message="message-failure" type="type-field"   ></failure>
-
-      <!-- Data that was written to standard out while the test was executed. optional -->
-      <system-out></system-out>
-
-      <!-- Data that was written to standard error while the test was executed. optional -->
-      <system-err></system-err>
-    </testcase>
-
-    <!-- Data that was written to standard out while the test suite was executed. optional -->
-    <system-out></system-out>
-    <!-- Data that was written to standard error while the test suite was executed. optional -->
-    <system-err></system-err>
-  </testsuite>
+<testsuites>
+<testsuite errors="1" failures="0" hostname="hooch" name="pytest" skipped="1" tests="3" time="0.025" timestamp="2020-02-05T10:52:33.843536">
+<testcase classname="test_x" file="test_x.py" line="7" name="test_comp_1" time="0.000"/>
+<testcase classname="test_x" file="test_x.py" line="10" name="test_comp_2" time="0.000">
+<skipped message="unconditional skip" type="pytest.skip">test_x.py:11: unconditional skip</skipped>
+<error message="test teardown failure">
+@pytest.fixture(scope="module") def compb(): yield > raise PermissionError E PermissionError test_x.py:6: PermissionError
+</error>
+</testcase>
+</testsuite>
 </testsuites>
