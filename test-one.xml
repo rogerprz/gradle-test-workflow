@@ -1,11 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-<testsuite errors="1" failures="0" hostname="hooch" name="pytest" skipped="1" tests="3" time="0.025" timestamp="2020-02-05T10:52:33.843536">
-<testcase classname="test_x" file="test_x.py" line="7" name="test_comp_1" time="0.000"/>
-<testcase classname="test_x" file="test_x.py" line="10" name="test_comp_2" time="0.000">
-<skipped message="unconditional skip" type="pytest.skip">test_x.py:11: unconditional skip</skipped>
-<error message="test teardown failure">
-@pytest.fixture(scope="module") def compb(): yield > raise PermissionError E PermissionError test_x.py:6: PermissionError
-</error>
-</testcase>
-</testsuite>
+   <testsuite name="JUnitXmlReporter" errors="0" tests="0" failures="0" time="0" timestamp="2013-05-24T10:23:58" />
+   <testsuite name="JUnitXmlReporter.constructor" errors="0" skipped="1" tests="3" failures="1" time="0.006" timestamp="2013-05-24T10:23:58">
+      <properties>
+         <property name="java.vendor" value="Sun Microsystems Inc." />
+         <property name="compiler.debug" value="on" />
+         <property name="project.jdk.classpath" value="jdk.classpath.1.6" />
+      </properties>
+      <testcase classname="JUnitXmlReporter.constructor" name="should default path to an empty string" time="0.006">
+         <failure message="test failure">Assertion failed</failure>
+      </testcase>
+      <testcase classname="JUnitXmlReporter.constructor" name="should default consolidate to true" time="0">
+         <skipped />
+      </testcase>
+      <testcase classname="JUnitXmlReporter.constructor" name="should default useDotNotation to true" time="0" />
+   </testsuite>
 </testsuites>
