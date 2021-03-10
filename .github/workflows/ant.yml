@@ -18,3 +18,8 @@ jobs:
           java-version: 1.11
       - name: Build with Ant
         run: ant -Dfile1=file1 -buildfile build.xml init compile
+      - name: Publish JUnit Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        if: always()
+        with:
+          files: "**/test*.xml"
