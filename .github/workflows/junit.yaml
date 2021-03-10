@@ -1,0 +1,28 @@
+# name: ADO Junit
+
+# on:
+#   push:
+#     branches: [ main ]
+#   pull_request:
+#     branches: [ main ]
+
+# jobs:
+
+#   build:
+#     runs-on: windows-latest  # For a list of available runner types, refer to
+
+#     steps:
+#     - name: Actions dependency
+#       uses: actions/checkout@v2
+    
+#     - name: Upload a Build Artifact
+#       uses: actions/upload-artifact@v2
+#       with:
+#         name: freestyle-raven
+#         path: |-
+#           freestyle-raven
+#           freestyle-raven/*.txt
+#           pokedex/legendary/**.rb
+#           !freestyle-raven/birds
+#         if-no-files-found: error
+#         retention-days: 0
