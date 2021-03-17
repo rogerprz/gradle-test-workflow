@@ -1,4 +1,4 @@
-name: Java CI
+name: ADO Gradle
 
 on: workflow_dispatch
 
