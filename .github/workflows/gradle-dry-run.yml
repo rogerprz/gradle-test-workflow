@@ -18,4 +18,5 @@ jobs:
       uses: EnricoMi/publish-unit-test-result-action@v1.7
       if: always()
       with:
+        github_token: ${{ github.token }}
         files: "**/TEST-*.xml"
