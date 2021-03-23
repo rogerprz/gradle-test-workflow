@@ -20,6 +20,9 @@ jobs:
         run: |
           wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.3.zip
           apt-get -y install unzip
+          unzip sonarqube-7.3.zip -d /opt
+          mv /opt/sonarqube-7.3 /opt/sonarqube
+          chown -R administrator:administrator /opt/sonarqube/
 
       - name: Build with Gradle
         run: ./gradlew build sonarqube -Dsonar.projectKey=rogerprz_Workflows -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
