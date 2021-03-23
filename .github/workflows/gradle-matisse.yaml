@@ -1,4 +1,4 @@
-name: ADO Gradle + SonarQube
+name: ADO Matisse Gradle + SonarQube
 
 on:
   push:
