@@ -1,0 +1,7 @@
+organization=sonarqubeogerprz
+projectKey=rogerprz_Workflows
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.18488
+dashboardUrl=https://sonarcloud.io/dashboard?id=rogerprz_Workflows
+ceTaskId=AXhg0J3JyUzeYrAtxvh0
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXhg0J3JyUzeYrAtxvh0
